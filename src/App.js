@@ -3,7 +3,7 @@ import Order from "./component/orders";
 function App() {
   return (
     <div className="App">
-      <Order/>
+      <Order />
     </div>
   );
 }

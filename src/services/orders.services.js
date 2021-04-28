@@ -1,10 +1,9 @@
 import { api } from "../config/woocom.config";
 
 export const ordersList = () => {
+  
   api
-    .get("orders", {
-      per_page: 20, // 20 products per page
-    })
+    .get("order")
     .then((response) => {
       // Successful request
       console.log("Response Status:", response.status);
@@ -15,9 +14,9 @@ export const ordersList = () => {
     })
     .catch((error) => {
       // Invalid request, for 4xx and 5xx statuses
-        // console.log("Response Status:", error.response.status);
-        // console.log("Response Headers:", error.response.headers);
-        // console.log("Response Data:", error.response.data);
+      // console.log("Response Status:", error.response.status);
+      // console.log("Response Headers:", error.response.headers);
+      // console.log("Response Data:", error.response.data);
     })
     .finally(() => {
       // Always executed.

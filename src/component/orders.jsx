@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { ordersList } from "../services/orders.services";
-import {geLatLong} from "../services/googleAddress.services";
+import { geLatLong } from "../services/googleAddress.services";
 const Orders = () => {
+  const Address =
+    "147, 1st Floor, Pandiyan St, Alwartirunagar, Valasaravakkam, Chennai, Tamil Nadu 600087";
   useEffect(() => {
     ordersList();
-    geLatLong();
+    geLatLong(Address);
   }, []);
 
   return (
